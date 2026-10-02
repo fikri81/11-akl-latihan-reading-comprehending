@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google" content="notranslate">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>SMKN WONGSOREJO - ESP AKL SECURE FINAL</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-user-select:none!important;user-select:none!important;-webkit-touch-callout:none!important}
+  body{background:#080b14;color:#e2e8f0;font-family:'Plus Jakarta Sans',sans-serif}
+  body::before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 10% 0%, #1e3a8a 0%, transparent 50%), radial-gradient(circle at 90% 100%, #7c3aed 0%, transparent 40%);pointer-events:none;z-index:-1}
+  header{background:linear-gradient(90deg,#0f172a,#1e293b);border-bottom:3px solid #fbbf24;padding:10px 12px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:99}
+  .logos{display:flex;gap:12px;align-items:center}
+  .logos img{height:86px;background:white;border-radius:14px;padding:5px;border:3px solid #fbbf24;box-shadow:0 0 22px #fbbf24;object-fit:contain}
+  .brand{text-align:right}
+  .brand h1{font-family:'Orbitron';font-size:15px;color:#fbbf24}
+  .brand p{font-size:9px;color:#94a3b8}
+  .container{max-width:980px;margin:0 auto;padding:12px}
+  .hero{background:linear-gradient(135deg,#0f172a,#1e3a8a 60%,#312e81);border:2px solid #fbbf24;border-radius:18px;padding:18px;margin-bottom:14px}
+  .hero h2{font-family:'Orbitron';font-size:18px;color:#fff} .hero h2 span{color:#fbbf24}
+  .badge{background:linear-gradient(90deg,#fbbf24,#f59e0b);color:#000;font-family:'Orbitron';font-weight:800;padding:4px 10px;border-radius:99px;font-size:9px;display:inline-block;margin-bottom:8px}
+  .secure-bar{background:#7f1d1d;border:1px solid #ef4444;color:#fecaca;border-radius:10px;padding:8px 10px;font-size:10px;font-family:'Orbitron';display:flex;justify-content:space-between;margin-bottom:12px}
+  .card{background:rgba(15,23,42,0.95);border:1px solid #334155;border-radius:16px;padding:14px;margin-bottom:14px;border-left:4px solid #3b82f6}
+  .card.gold{border-left-color:#fbbf24}
+  .card h3{font-family:'Orbitron';font-size:12px;color:#fbbf24;margin-bottom:10px}
+  .audio-bar{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap}
+  .audio-btn{background:linear-gradient(90deg,#1d4ed8,#3b82f6);color:white;border:1px solid #60a5fa;padding:9px 12px;border-radius:10px;font-weight:700;font-size:11px;cursor:pointer}
+  .audio-btn.stop{background:linear-gradient(90deg,#dc2626,#ef4444)}
+  .text-content{line-height:1.7;font-size:13px;color:#e2e8f0;text-align:justify} .text-content b{color:#fbbf24}
+  .quiz-tabs{display:flex;gap:6px;margin-bottom:10px}
+  .tab{flex:1;padding:11px;border-radius:10px;border:1px solid #475569;background:#1e293b;color:#94a3b8;font-family:'Orbitron';font-size:10px;font-weight:800;cursor:pointer;text-align:center}
+  .tab.active{background:linear-gradient(90deg,#fbbf24,#f59e0b);color:#000;border-color:#fbbf24}
+  .q{display:none;background:#1e293b;border:1px solid #334155;border-radius:12px;padding:12px;margin-bottom:10px}
+  .q.active{display:block} .q p{font-weight:600;font-size:12.5px;color:#fff;margin-bottom:8px} .q small{color:#fbbf24;font-size:9px;font-family:'Orbitron'}
+  .options button{width:100%;text-align:left;padding:10px 11px;border-radius:9px;border:1px solid #475569;background:#0f172a;color:#e2e8f0;font-size:12px;margin:4px 0;cursor:pointer}
+  .options button.correct{background:#14532d;border-color:#22c55e} .options button.wrong{background:#7f1d1d;border-color:#ef4444}
+  .progress{height:8px;background:#1e293b;border-radius:99px;overflow:hidden;margin:8px 0;border:1px solid #334155} .progress-bar{height:100%;background:linear-gradient(90deg,#fbbf24,#22c55e);width:0%;transition:0.4s}
+  .calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .calc-grid input{padding:14px;border-radius:12px;border:2px solid #fbbf24;background:#0f172a;color:#fbbf24;font-weight:800;font-size:15px;text-align:center}
+  .btn-ml{background:linear-gradient(90deg,#fbbf24,#f59e0b);color:#000;border:none;padding:13px;border-radius:11px;font-family:'Orbitron';font-weight:800;cursor:pointer;width:100%;margin-top:8px}
+  .result{margin-top:8px;padding:10px;border-radius:10px;background:#1e293b;border:1px solid #334155;font-size:11px;display:none;color:#fff}
+  #overlaySS{position:fixed;inset:0;background:#000;z-index:9999;display:none;align-items:center;justify-content:center;color:#fbbf24;font-family:'Orbitron';font-size:18px;text-align:center;padding:20px}
+  footer{text-align:center;padding:16px;font-size:9px;color:#64748b}
+</style>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+<div id="overlaySS">⚠️ SECURITY ALERT<br>SCREENSHOT BLOCKED<br>SMKN WONGSOREJO SECURE EXAM</div>
+<header>
+  <div class="logos">
+    <img src="https://raw.githubusercontent.com/fikri81/handbook_TKR/main/logo-smknw-3d%20(1).jpg" alt="SMKN">
+    <img src="https://raw.githubusercontent.com/fikri81/handbook_TKR/main/logox.png" alt="LOGO">
+  </div>
+  <div class="brand"><h1>SMKN WONGSOREJO</h1><p>SECURE EXAM - AKL 11</p></div>
+</header>
+<div class="container">
+  <div class="secure-bar"><span>🔒 SECURE ACTIVE</span><span id="timer">AKL11-ENGLISH</span><span>🛡️ ANTI-TRANSLATE | ANTI-COPY</span></div>
+  <div class="hero"><span class="badge">100% ENGLISH - 20 Q - 5 OPTIONS</span><h2>FINAL MISSION: <span>READING MYTHIC</span></h2><p style="font-size:11px;color:#cbd5e1;margin-top:5px">Article 1 = Coffee Business (10 Q) | Article 2 = Startup (10 Q) | Calculator has English story question.</p></div>
+
+  <div class="card gold">
+    <h3>ARTICLE 1 - COFFEE SHOPS CRISIS</h3>
+    <div class="audio-bar"><button class="audio-btn" onclick="speak('t1')">▶️ PLAY ARTICLE 1</button><button class="audio-btn stop" onclick="stop()">⏹️ STOP</button><button class="audio-btn" onclick="speak('t1slow')" style="background:linear-gradient(90deg,#7c3aed,#a78bfa)">🐢 SLOW</button></div>
+    <div class="text-content" id="t1">BANYUWANGI'S COFFEE SHOPS FEEL THE HEAT AS BEAN PRICES SOAR. Banyuwangi, known for its robusta and arabica plantations in the Ijen area, is facing an economic paradox. While global coffee prices reached a record high due to crop failure in Vietnam and Brazil, local SMEs in Wongsorejo reported a decline in net profit. The Cost of Goods Sold (COGS) increased by 35%. The latest Income Statement shows gross revenue increased from 45 million to 52 million, but gross profit margin dropped from 55% to 38%. After deducting operating expenses such as salaries and rent, net income fell by 12%. Analysts suggest careful inventory valuation using FIFO method and managing accounts payable to maintain cash flow, liquidity, and break-even point.</div>
+  </div>
+
+  <div class="card">
+    <h3>ARTICLE 2 - GO-PANGAN LOSS</h3>
+    <div class="audio-bar"><button class="audio-btn" onclick="speak('t2')">▶️ PLAY ARTICLE 2</button><button class="audio-btn stop" onclick="stop()">⏹️ STOP</button></div>
+    <div class="text-content" id="t2">INDONESIAN TECH STARTUP GO-PANGAN REPORTS MASSIVE LOSS DESPITE UNICORN STATUS. The startup recorded a net loss of 250 billion in Q3 despite 200% revenue growth. The loss was driven by non-cash expenses, including depreciation expense for delivery trucks and bad debt expense due to farmers failing to repay micro-loans. On the liabilities side, the company has significant long-term debt and short-term bank loans. Interest expense reached 40 billion. Current ratio dropped below 1.0, indicating a solvency issue. The company uses accrual basis, not cash basis. Receivables were recorded as revenue before cash was received. Auditors are examining impairment of intangible assets like software. Investors await the statement of retained earnings and equity.</div>
+  </div>
+
+  <div class="card gold">
+    <h3>BATTLE QUIZ - 20 QUESTIONS - ENGLISH ONLY</h3>
+    <div class="quiz-tabs"><div class="tab active" onclick="switchTab(1)">MISSION 1: COFFEE (10)</div><div class="tab" onclick="switchTab(2)">MISSION 2: STARTUP (10)</div></div>
+    <div class="progress"><div class="progress-bar" id="pbar"></div></div>
+    <p style="font-size:10px;color:#94a3b8">Score: <span id="score">0</span>/20 | <span id="status">START!</span></p>
+    <div id="quiz1"></div><div id="quiz2" style="display:none"></div>
+    <button class="btn-ml" onclick="nextQ()">NEXT QUESTION ➡️</button>
+  </div>
+
+  <div class="card">
+    <h3>🧮 CALCULATOR GAME - WITH QUESTION</h3>
+    <div style="background:#0f172a;border:1px dashed #fbbf24;border-radius:10px;padding:12px;margin-bottom:10px">
+      <p style="font-size:12.5px;color:#fff;line-height:1.5">
+        <b style="color:#fbbf24">QUESTION (READ CAREFULLY):</b><br>
+        Siti's Coffee Shop in Sumberanyar reports financial data:<br>
+        - Gross Revenue = Rp 52,000,000<br>
+        - COGS = 62% of Revenue<br>
+        - Operating Expenses = Rp 15,000,000<br>
+        - Target Net Income = Rp 5,000,000<br><br>
+        <b>TASKS:</b><br>
+        1. Calculate COGS in Rupiah?<br>
+        2. Calculate Gross Profit and Gross Margin %?<br>
+        3. Calculate Net Income?<br>
+        4. Is it VICTORY (Net Income >= Target) or DEFEAT?
+      </p>
+    </div>
+    <div class="calc-grid">
+      <div><label style="font-size:9px;color:#fbbf24;font-family:'Orbitron'">REVENUE (Rp)</label><input type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" id="rev" value="52000000"></div>
+      <div><label style="font-size:9px;color:#fbbf24;font-family:'Orbitron'">COGS %</label><input type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" id="cogsP" value="62"></div>
+      <div><label style="font-size:9px;color:#fbbf24;font-family:'Orbitron'">OPERATING EXPENSES</label><input type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" id="opex" value="15000000"></div>
+      <div><label style="font-size:9px;color:#fbbf24;font-family:'Orbitron'">TARGET NET INCOME</label><input type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" id="target" value="5000000"></div>
+    </div>
+    <button class="btn-ml" onclick="calc()">🔥 CALCULATE ANSWER</button>
+    <div class="result" id="calcRes"></div>
+  </div>
+</div>
+<footer>© SMKN WONGSOREJO - SECURE ENGLISH EXAM - AKL 11</footer>
+<script>
+// SECURITY
+document.addEventListener('contextmenu',e=>e.preventDefault());
+document.addEventListener('copy',e=>e.preventDefault());
+document.addEventListener('cut',e=>e.preventDefault());
+document.addEventListener('keydown',e=>{
+  if((e.ctrlKey&&(e.key==='c'||e.key==='u'||e.key==='s'||e.key==='p'||e.key==='a'))||e.key==='PrintScreen'||(e.ctrlKey&&e.shiftKey&&(e.key==='I'||e.key==='J'))||e.key==='F12'){e.preventDefault();showBlock();}
+});
+document.addEventListener('keyup',e=>{if(e.key==='PrintScreen'){showBlock();}});
+document.addEventListener('visibilitychange',()=>{if(document.hidden){showBlock();setTimeout(hideBlock,1500);}});
+window.addEventListener('blur',()=>{showBlock();setTimeout(hideBlock,1000);});
+function showBlock(){document.getElementById('overlaySS').style.display='flex';}
+function hideBlock(){document.getElementById('overlaySS').style.display='none';}
+
+const q1=[
+{q:"1. What does COGS stand for in Article 1?",opts:["Cost of Goods Sold","Cost of Great Services","Cash on General Sales","Company Operating Guidance System","Central Order Goods Supply"],ans:0},
+{q:"2. Why did net income fall even though revenue increased?",opts:["COGS increased faster than revenue, causing margin to drop","There was no sale at all","The company closed","All products were free","Revenue was not recorded"],ans:0},
+{q:"3. What happened to gross profit margin?",opts:["It dropped from 55% to 38%","It increased to 90%","It stayed the same","It became zero","It was not mentioned"],ans:0},
+{q:"4. Which items are classified as operating expenses?",opts:["Salaries, rent, and electricity","Personal house purchase","CEO sports car","Lost money","All wrong"],ans:0},
+{q:"5. What is the effect of using FIFO during inflation?",opts:["Ending inventory value is higher and taxable income is higher","Ending inventory is zero","No tax","No inventory","All inventory is lost"],ans:0},
+{q:"6. What does Accounts Payable mean?",opts:["Amount owed to suppliers or farmers","Amount owed by customers","Owner's capital","Retained earnings","Fixed assets"],ans:0},
+{q:"7. Why are cash flow and liquidity important?",opts:["To maintain ability to pay short-term obligations","For display only","Not important","Only for tax","To remove all debt"],ans:0},
+{q:"8. What is the definition of break-even point?",opts:["Point where total revenue equals total cost","Point where company must bankrupt","Point of highest sales","Point with no COGS","Point with no revenue"],ans:0},
+{q:"9. What does an Income Statement show?",opts:["Revenue, COGS, Gross Profit, and Net Income for a period","Only cash","Only liabilities","Only assets","Only owner name"],ans:0},
+{q:"10. Why is inventory valuation necessary?",opts:["To determine accurate ending inventory and COGS","To delete inventory","To make inventory zero","To sell at a loss","It has no function"],ans:0},
+];
+const q2=[
+{q:"1. What caused the 250 billion net loss despite revenue growth?",opts:["Large non-cash expenses like depreciation and bad debt expense","No sales at all","All cash disappeared","All assets sold","No employees"],ans:0},
+{q:"2. What is depreciation expense for trucks?",opts:["A non-cash expense, no cash outflow at that moment","A direct cash expense","A revenue","A new liability","A new equity"],ans:0},
+{q:"3. Why did bad debt expense occur?",opts:["Farmers failed to repay micro-loans, becoming uncollectible receivables","Trucks were broken","Coffee ran out","Electricity off","All wrong"],ans:0},
+{q:"4. Long-term debt and short-term loans are classified as?",opts:["Liabilities","Assets","Equity","Revenue","Retained Earnings"],ans:0},
+{q:"5. What is interest expense of 40 billion?",opts:["Cost of borrowing, expense for loans","Interest income","Accounts payable","Accounts receivable","Fixed asset"],ans:0},
+{q:"6. What does current ratio below 1.0 indicate?",opts:["Current liabilities exceed current assets, liquidity and solvency risk","Company is very healthy","No debt","Lots of cash","All safe"],ans:0},
+{q:"7. What is the difference between accrual basis and cash basis?",opts:["Accrual records revenue when earned, not when cash received","Cash basis is always more accurate","Accrual does not use receivables","Cash basis records only liabilities","Both are exactly the same"],ans:0},
+{q:"8. Recording receivables as revenue before cash is received is characteristic of?",opts:["Accrual basis accounting","Cash basis accounting","FIFO method","Break-even analysis","Liquidity ratio"],ans:0},
+{q:"9. Which is an example of impaired intangible assets?",opts:["Software and brand value decreasing in value","Trucks and warehouse","Cash and bank","Accounts payable","Employee salaries"],ans:0},
+{q:"10. Why do investors need statement of retained earnings and equity?",opts:["To decide whether to inject more equity or withdraw investment","Only for decoration","No function","Only for farmers tax","Only for COGS"],ans:0},
+];
+let currentTab=1, currentQ=0, score=0, answered=false;
+function renderQuiz(){
+  const c1=document.getElementById('quiz1'); c1.innerHTML='';
+  q1.forEach((qq,i)=>{ c1.innerHTML+=`<div class="q ${i===0?'active':''}" id="q1-${i}"><small>MISSION 1 - QUESTION ${i+1}/10</small><p>${qq.q}</p><div class="options">${qq.opts.map((o,j)=>`<button onclick="check(this,${j},${qq.ans})">${String.fromCharCode(65+j)}. ${o}</button>`).join('')}</div></div>`; });
+  const c2=document.getElementById('quiz2'); c2.innerHTML='';
+  q2.forEach((qq,i)=>{ c2.innerHTML+=`<div class="q ${i===0?'active':''}" id="q2-${i}"><small>MISSION 2 - QUESTION ${i+1}/10</small><p>${qq.q}</p><div class="options">${qq.opts.map((o,j)=>`<button onclick="check(this,${j},${qq.ans})">${String.fromCharCode(65+j)}. ${o}</button>`).join('')}</div></div>`; });
+}
+renderQuiz();
+function switchTab(t){ currentTab=t; document.querySelectorAll('.tab').forEach((el,i)=>el.classList.toggle('active',i+1===t)); document.getElementById('quiz1').style.display=t===1?'block':'none'; document.getElementById('quiz2').style.display=t===2?'block':'none'; currentQ=0; showQ(); }
+function showQ(){ const prefix=currentTab===1?'q1-':'q2-'; document.querySelectorAll(`#quiz${currentTab} .q`).forEach(q=>q.classList.remove('active')); const a=document.getElementById(prefix+currentQ); if(a) a.classList.add('active'); answered=false; }
+function check(btn,j,ans){ if(answered) return; answered=true; if(j===ans){btn.classList.add('correct'); score++; document.getElementById('status').innerText='CORRECT! MANIAC!';} else {btn.classList.add('wrong'); document.getElementById('status').innerText='WRONG - DEFEAT'; btn.parentElement.children[ans].classList.add('correct');} document.getElementById('score').innerText=score; document.getElementById('pbar').style.width=(score/20*100)+'%'; }
+function nextQ(){ const max=currentTab===1?q1.length:q2.length; if(currentQ<max-1){currentQ++; showQ();} else { if(currentTab===1){switchTab(2);} else {alert('FINISHED! Score: '+score+'/20 - '+(score>=16?'LEGENDARY!':'Try again!'));}}}
+let utter; function speak(id){ stop(); let txt=document.getElementById(id==='t1'?'t1':id==='t1slow'?'t1':'t2').innerText; utter=new SpeechSynthesisUtterance(txt); utter.lang='en-US'; utter.rate=id==='t1slow'?0.65:0.9; speechSynthesis.speak(utter); } function stop(){ speechSynthesis.cancel(); }
+function calc(){
+  const rev=parseFloat(document.getElementById('rev').value)||0; const p=parseFloat(document.getElementById('cogsP').value)||0; const opex=parseFloat(document.getElementById('opex').value)||0; const target=parseFloat(document.getElementById('target').value)||0;
+  const cogs=rev*p/100; const gross=rev-cogs; const margin=(gross/rev*100).toFixed(1); const net=gross-opex;
+  const el=document.getElementById('calcRes'); el.style.display='block';
+  el.innerHTML=`<b style="color:#fbbf24">ANSWER:</b><br>1. COGS = ${p}% x Rp ${rev.toLocaleString('id-ID')} = <b>Rp ${cogs.toLocaleString('id-ID')}</b><br>2. Gross Profit = Rp ${gross.toLocaleString('id-ID')} | Margin = ${margin}%<br>3. Net Income = Rp ${gross.toLocaleString('id-ID')} - Rp ${opex.toLocaleString('id-ID')} = <b>Rp ${net.toLocaleString('id-ID')}</b><br>4. Target = Rp ${target.toLocaleString('id-ID')}<br><br><div style="padding:8px;border-radius:8px;text-align:center;font-family:'Orbitron';font-weight:800;background:${net>=target?'#14532d':'#7f1d1d'};border:1px solid ${net>=target?'#22c55e':'#ef4444'}">${net>=target?'🔥 VICTORY - TARGET ACHIEVED!':'💀 DEFEAT - BELOW TARGET!'}</div><p style="margin-top:8px;font-size:11px;color:#cbd5e1">Comprehension: Revenue up but high COGS % causes Net Income to fall. This is Article 1 case.</p>`;
+}
+document.querySelectorAll('input[inputmode="numeric"]').forEach(inp=>{ inp.addEventListener('input',function(){this.value=this.value.replace(/[^0-9]/g,'');}); });
+</script>
+</body>
+</html>
